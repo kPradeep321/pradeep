@@ -1,0 +1,25 @@
+<html ng-app='demoApp'>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+<body>
+
+
+<form ng-controller="validationCtrl">
+    <input type="text" placeholder="Name...." ng-model="user.name"/>
+    <input type="text" placeholder="Password...." ng-model="user.pass"/>
+    <input type="text" placeholder="Mobile...." ng-model="user.mo"/>
+    <input type="submit" ng-click="alldata(user)"/>
+</form>
+<script>
+//This is controller
+var app = angular.module('demoApp', []);
+app.controller('validationCtrl', function($scope) {
+
+   $scope.alldata=function(user)
+   {
+    alert(JSON.stringify(user));
+   }
+});
+</script>
+
+</body>
+</html>
